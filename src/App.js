@@ -20,7 +20,7 @@ class App extends React.Component {
                 loading: true,
             }, () => {
                 {
-                    fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${this.apikey}&units=metric`)
+                    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${this.apikey}&units=metric`)
                         .then(res => res.json())
                         .then(data => {
                                 if (data.cod === 200) {
@@ -52,7 +52,7 @@ class App extends React.Component {
                                 <h1 className={'weather-prop'}>Ощущается:{this.state.data.main.feels_like} C</h1>
                                 {this.state.data.weather.map((item) => (
                                     <div className={'image-box'}><img key={item.id}
-                                                                      src={`http://openweathermap.org/img/wn/${item.icon}@2x.png`}
+                                                                      src={`https://openweathermap.org/img/wn/${item.icon}@2x.png`}
                                                                       alt=""/></div>))}
                             </div>
                         ) : (<h4 align={'center'} className={'enter-tag'}>Введите название города</h4>)}
