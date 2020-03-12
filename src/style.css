@@ -34,6 +34,7 @@ form{margin: 15px}
     margin: 5px;
     border: 2px solid #93d7e2;
     font-weight: bold;
+    outline:none !important;
 }
 .city-name {
     border-radius: 20px;
@@ -41,6 +42,7 @@ form{margin: 15px}
     height: 45px;
     border: none;
     text-align: center;
+    outline:none;
 }
 .weather-prop{
     color: white;
