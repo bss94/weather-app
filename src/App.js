@@ -51,7 +51,7 @@ class App extends React.Component {
                                 <h1 className={'weather-prop'}>Температура:{this.state.data.main.temp} C</h1>
                                 <h1 className={'weather-prop'}>Ощущается:{this.state.data.main.feels_like} C</h1>
                                 {this.state.data.weather.map((item) => (
-                                    <div className={'image-box'}><img key={item.id}
+                                    <div key={item.id} className={'image-box'}><img
                                                                       src={`https://openweathermap.org/img/wn/${item.icon}@2x.png`}
                                                                       alt=""/></div>))}
                             </div>
