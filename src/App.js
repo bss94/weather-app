@@ -10,11 +10,6 @@ class App extends React.Component {
     };
     apikey = '1e421ccd9a9020fc2890daf0359af1f3';
 
-// async componentDidMount() {
-//         const response= await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${this.state.city}&appid=${this.apikey}&units=metric`);
-//         const data=await response.json();
-//         this.setState({data});
-// };
     handleChange = (event) => {
         this.setState({city: event.target.value});
     };
@@ -61,25 +56,6 @@ class App extends React.Component {
                                                                       alt=""/></div>))}
                             </div>
                         ) : (<h4 align={'center'} className={'enter-tag'}>Введите название города</h4>)}
-                        {/*// const weather =this.state.data;*/}
-                        {/*// console.log(this.state.data);*/}
-                        {/*// if (!weather)*/}
-                        {/*// return (*/}
-                        {/*//     <div className={'container'}>*/}
-                        {/*//         LOADING!!!!!!*/}
-                        {/*//         <br/>*/}
-                        {/*//         Please stand by*/}
-                        {/*// </div>  );*/}
-                        {/*{this.state.data ? (*/}
-                        {/*    <div>*/}
-                        {/*    <h1 align={'center'}>Температура:{this.state.data.main.temp} C</h1>*/}
-                        {/*    <h1 align={'center'}>Ощущается:{this.state.data.main.feels_like} C</h1>*/}
-                        {/*        {this.state.data.weather.map((item) => (*/}
-                        {/*            <img key={item.id} src={`http://openweathermap.org/img/wn/${item.icon}@2x.png`}*/}
-                        {/*                 alt=""/>))}*/}
-                        {/*    </div>*/}
-                        {/*) : (<h4 align={'center'} className={'enter-tag'}>Введите название города</h4>)}*/}
-
                     </div>
                 </div>
             </div>
