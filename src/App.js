@@ -48,14 +48,21 @@ class App extends React.Component {
                         {this.state.error ? (<h4 align={'center'} className={'enter-tag'}>Город не найден<br/>
                             Введите правильное название города</h4>) : this.state.data ? (
                             <div>
-                                <h1 className={'weather-prop'}>Температура:{this.state.data.main.temp} C</h1>
-                                <h1 className={'weather-prop'}>Ощущается:{this.state.data.main.feels_like} C</h1>
+                                <h1 className={'weather-prop'}>{this.state.data.name}</h1>
                                 {this.state.data.weather.map((item) => (
                                     <div key={item.id} className={'image-box'}><img
                                                                       src={`https://openweathermap.org/img/wn/${item.icon}@2x.png`}
                                                                       alt=""/></div>))}
+                                <h3 className={'weather-prop'}>Температура: {this.state.data.main.temp}°C</h3>
+                                <h3 className={'weather-prop'}>Ощущается:  {this.state.data.main.feels_like}°C</h3>
                             </div>
-                        ) : (<h4 align={'center'} className={'enter-tag'}>Введите название города</h4>)}
+                        ) : (<div className={'start-box'}>
+                                <h4 align={'center'} className={'enter-tag'}>Введите название города</h4>
+                            <img
+                            src={`https://lh3.googleusercontent.com/napgxTBO7Efx-5NrdG_Mrfh6tISWc7Q1V6mXhQl-yDMOCPQIeioaTnUG5-zAjnFP-_o=w300`}
+                            alt=""
+                            className={"fake-pic"}/></div>
+                        )}
                     </div>
                 </div>
             </div>

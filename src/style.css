@@ -3,7 +3,7 @@
     align-items: center;
     justify-content: center;
     border: wheat 3px solid;
-    background: #94e2ee;
+    background: linear-gradient(180deg, #5eb7e6, #5a56a2);;
     flex-direction: column;
     width: 500px;
     padding: 50px ;
@@ -26,13 +26,13 @@ form{margin: 15px}
     align-items: center;
 }
 .city-btn{
-    background: dodgerblue;
+    background: #0376d3;
     border-radius:20px;
     height: 50px;
     width: 150px;
     color: white;
     margin: 5px;
-    border: 2px solid #93d7e2;
+    border: 2px solid #007de2;
     font-weight: bold;
     outline:none !important;
 }
@@ -47,4 +47,15 @@ form{margin: 15px}
 .weather-prop{
     color: white;
     text-align: center;
+}
+.fake-pic{
+    width:150px;
+    height: 150px;
+
+}
+.start-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
